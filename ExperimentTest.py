@@ -30,5 +30,9 @@ class MyTestCase(unittest.TestCase):
   def test_t7(self):
     self.assertRaises(ValueError, Experiment.largest, [])
 
+  def test_t8(self):
+    r1 = Experiment.largest([0])
+    self.assertEquals(r1,0)
+
 if __name__ == '__main__':
   unittest.main()
