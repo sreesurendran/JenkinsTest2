@@ -15,5 +15,17 @@ class MyTestCase(unittest.TestCase):
     r1 = Experiment.largest([3,2,3]) 
     self.assertEqual(r1, 3)
 
+  def test_t4(self):
+    r1 = Experiment.largest([3,2,3,4]) 
+    self.assertEqual(r1, 4)
+
+  def test_t5(self):
+    r1 = Experiment.largest([3,-2,3,-1,4]) 
+    self.assertEqual(r1, 4)
+
+  def test_t6(self):
+    r1 = Experiment.largest([-3,-2,-3,-1,-4]) 
+    self.assertEqual(r1, -1)
+
 if __name__ == '__main__':
   unittest.main()
